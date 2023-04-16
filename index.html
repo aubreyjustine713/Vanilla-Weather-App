@@ -11,12 +11,36 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
-    <link rel="stylesheet" href="src/app.js" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-      <h1>Hello</h1>
+      <div class="weather-app-wrapper">
+        <h1 id="city">Uxbridge</h1>
+        <ul>
+          <li>Last updated <span id="date-time">Friday 5:00</span></li>
+          <li id="description">Clear</li>
+        </ul>
+        <div class="row">
+          <div class="col-6" id="temperature">12°C</div>
+          <div class="col-6" id="conditions">
+            <ul>
+              <li>Humidity: <span id="humidity">79</span>%</li>
+              <li>Wind: <span id="wind">40</span>km/h</li>
+            </ul>
+          </div>
+        </div>
+        <small
+          ><a
+            href="https://github.com/aubreyjustine713/Vanilla-Weather-App"
+            target="_blank"
+          >
+            Open source code</a
+          >
+          by Aubrey Jamison</small
+        >
+      </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
