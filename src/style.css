@@ -16,6 +16,8 @@ li {
   color: #7a7a7a;
   font-size: 18px;
   font-weight: 300px;
+}
+li:first-letter {
   text-transform: capitalize;
 }
 #temperature {
