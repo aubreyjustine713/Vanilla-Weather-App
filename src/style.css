@@ -17,10 +17,25 @@ li {
   font-size: 18px;
   font-weight: 300px;
 }
+#temperature strong {
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 500;
+}
+#temperature .units {
+  position: relative;
+  top: -33px;
+  font-size: 14px;
+}
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
+}
+.weather-app {
   padding: 20px;
   border: 1px solid #a7a7a7;
   border-radius: 5px;
+}
+.overview {
+  margin-bottom: 20px;
 }

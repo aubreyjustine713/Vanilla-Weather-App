@@ -22,18 +22,25 @@
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
-        <h1 id="city">Uxbridge</h1>
-        <ul>
-          <li>Last updated <span id="date-time">Friday 5:00</span></li>
-          <li id="description">Clear</li>
-        </ul>
-        <div class="row">
-          <div class="col-6" id="temperature">12°C</div>
-          <div class="col-6" id="conditions">
+        <div class="weather-app">
+          <div class="overview">
+            <h1 id="city">Uxbridge</h1>
             <ul>
-              <li>Humidity: <span id="humidity">79</span>%</li>
-              <li>Wind: <span id="wind">40</span>km/h</li>
+              <li>Last updated <span id="date-time">Friday 5:00</span></li>
+              <li id="description">Clear</li>
             </ul>
+          </div>
+          <div class="row">
+            <div class="col-6" id="temperature">
+              <strong>12</strong
+              ><span class="units">°C | <a href="#">°F</a></span>
+            </div>
+            <div class="col-6" id="conditions">
+              <ul>
+                <li>Humidity: <span id="humidity">79</span>%</li>
+                <li>Wind: <span id="wind">40</span>km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
         <small
