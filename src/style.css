@@ -16,15 +16,16 @@ li {
   color: #7a7a7a;
   font-size: 18px;
   font-weight: 300px;
+  text-transform: capitalize;
 }
-#temperature strong {
-  font-size: 60px;
+#temperature {
+  font-size: 65px;
   line-height: 1;
   font-weight: 500;
 }
-#temperature .units {
+.units {
   position: relative;
-  top: -33px;
+  top: -37px;
   font-size: 14px;
 }
 .weather-app-wrapper {
