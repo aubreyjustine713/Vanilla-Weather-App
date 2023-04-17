@@ -31,8 +31,15 @@ function displayTemperature(response) {
   );
   let dateElement = document.querySelector("#date-time");
   dateElement.innerHTML = formatDate(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 let apiKey = "9t00ecb4eo3189a04cbb6f6f58a37ac9";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query={Newmarket}&key=${apiKey}&units=metric`;
+let city = "Newmarket";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 console.log(apiUrl);
 axios.get(apiUrl).then(displayTemperature);
