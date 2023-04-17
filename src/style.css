@@ -20,6 +20,9 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+form {
+  margin-bottom: 20px;
+}
 #temperature {
   font-size: 65px;
   line-height: 1;
