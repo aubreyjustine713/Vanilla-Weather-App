@@ -23,10 +23,17 @@ li:first-letter {
 form {
   margin-bottom: 20px;
 }
+#icon {
+  position: relative;
+  top: -15px;
+}
 #temperature {
   font-size: 65px;
   line-height: 1;
   font-weight: 500;
+}
+.weather-temperature a {
+  text-decoration: none;
 }
 .weather-temperature .active {
   color: #616161;
@@ -49,6 +56,7 @@ form {
   padding: 20px;
   border: 1px solid #a7a7a7;
   border-radius: 5px;
+  padding-bottom: 0;
 }
 .overview {
   margin-bottom: 20px;

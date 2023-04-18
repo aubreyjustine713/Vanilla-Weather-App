@@ -17,6 +17,7 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+
 function displayTemperature(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.temperature.current
@@ -30,8 +31,9 @@ function displayTemperature(response) {
     response.data.wind.speed
   );
   celsiusTemperature = response.data.temperature.current;
-  let dateElement = document.querySelector("#date-time");
-  dateElement.innerHTML = formatDate(response.data.time * 1000);
+  document.querySelector("#date-time").innerHTML = formatDate(
+    response.data.time * 1000
+  );
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -39,6 +41,7 @@ function displayTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.condition.description);
 }
+
 function search(city) {
   let apiKey = "9t00ecb4eo3189a04cbb6f6f58a37ac9";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -50,21 +53,23 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
+
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  document.querySelector("#temperature").innerHTML = Math.round(
+    fahrenheitTemperature
+  );
 }
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemperature);
 }
 
 let celsiusTemperature = null;
