@@ -28,6 +28,14 @@ form {
   line-height: 1;
   font-weight: 500;
 }
+.weather-temperature .active {
+  color: #616161;
+  cursor: default;
+  text-decoration: none;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
 .units {
   position: relative;
   top: -37px;
