@@ -61,3 +61,8 @@ form {
 .overview {
   margin-bottom: 20px;
 }
+.weather-forecast {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #7a7a7a;
+}
