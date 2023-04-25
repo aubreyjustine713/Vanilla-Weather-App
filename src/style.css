@@ -32,21 +32,11 @@ form {
   line-height: 1;
   font-weight: 500;
 }
-.weather-temperature a {
-  text-decoration: none;
-}
-.weather-temperature .active {
-  color: #616161;
-  cursor: default;
-  text-decoration: none;
-}
-.weather-temperature .active:hover {
-  text-decoration: none;
-}
 .units {
   position: relative;
   top: -37px;
   font-size: 14px;
+  color: #616161;
 }
 .weather-app-wrapper {
   max-width: 600px;
